@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Penjumlahan</title>
+<script>
+    function cek(){
+        if(form.angka1.value == "" || form.angka2.value == "") {
+            alert ("anda belum memasukan angka?"); //jika kosong maka pesan akan tampil 
+            exit;
+        }
+    }
+    function tambah(){
+        cek(); //panggil function cek
+        a=eval (form.angka1.value); //variabel a = angka pertama
+        b=eval (form.angka2.value); // variabel b= angka kedua
+        c=a+b // variabel c= penjumlahan
+        form.total.value = c; // Menampilkan hasil penjumlahan
+    }
+</script>
+</head>
+<body>
+<form name ="form">
+    Aplikasi Penjumlahan:<br><br>
+    <input type=text name="angka1" size="1">+
+    <input name="angka2" type="text" size="1"/>
+    <input type="button"name=submit onclick="tambah()" value="=">
+    <input type="text" value="" name="total" size="2">
+</form>
+</body>
+</html>
